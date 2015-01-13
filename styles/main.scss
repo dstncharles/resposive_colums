@@ -1,2 +1,18 @@
 @import 'bourbon/bourbon';
+$visual-grid: true;
 @import 'neat/neat';
+$tablet: new-breakpoint(min-width 481px max-width 991px 8);
+$mobile: new-breakpoint(max-width 480px 4);
+
+.food {
+  max-width: 480px;
+  @include span-columns(4);
+
+  @include media($tablet) {
+    @include span-columns(8);
+
+  }
+  @include media($mobile) {
+    @include span-columns(4)
+  }
+}
