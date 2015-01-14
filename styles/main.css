@@ -27,29 +27,47 @@ body:before {
   width: 100%;
   z-index: -1; }
 
+.maindiv {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  .maindiv::after {
+    clear: both;
+    content: "";
+    display: table; }
+
 .food {
-  max-width: 480px;
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 31.76157%; }
   .food:last-child {
     margin-right: 0; }
-  @media screen and (min-width: 481px) and (max-width: 991px) {
+  @media screen and (min-width: 501px) and (max-width: 840px) {
     .food {
       float: left;
       display: block;
-      margin-right: 3.57866%;
+      margin-right: 2.35765%;
       width: 100%; }
       .food:last-child {
-        margin-right: 0; } }
-  @media screen and (max-width: 480px) {
+        margin-right: 0; }
+      .food .textdiv {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 48.82117%; }
+        .food .textdiv:last-child {
+          margin-right: 0; } }
+  @media screen and (max-width: 500px) {
     .food {
       float: left;
       display: block;
-      margin-right: 7.42297%;
+      margin-right: 2.35765%;
       width: 100%; }
       .food:last-child {
         margin-right: 0; } }
+
+.textdiv {
+  display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */

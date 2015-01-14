@@ -1,18 +1,28 @@
 @import 'bourbon/bourbon';
 $visual-grid: true;
 @import 'neat/neat';
-$tablet: new-breakpoint(min-width 481px max-width 991px 8);
-$mobile: new-breakpoint(max-width 480px 4);
+$tablet: new-breakpoint(min-width 501px max-width 840px 12);
+$mobile: new-breakpoint(max-width 500px);
 
+.maindiv {
+  @include outer-container;
+
+}
 .food {
-  max-width: 480px;
   @include span-columns(4);
 
   @include media($tablet) {
-    @include span-columns(8);
+    @include span-columns(12);
+    .textdiv {
+      @include span-columns(6)
+    }
 
   }
   @include media($mobile) {
-    @include span-columns(4)
+    @include span-columns(12)
   }
+
+}
+.textdiv {
+  display: inline-block;
 }
